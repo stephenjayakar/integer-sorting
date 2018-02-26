@@ -1,8 +1,13 @@
 from random import randint
 
 MAX_INT = 99999
+N = 10000
 
-# destructive
+"""
+Destructive Insertion Sort
+O(n^2) time 
+This one kind of sucks :( 
+"""
 def insertion_sort(lst):
     n = len(lst)
     for i in range(n):
@@ -14,11 +19,15 @@ def insertion_sort(lst):
             lst[index + 1] = temp
             index -= 1
 
-    
-lst = []
-for i in range(10000):
-    lst.append(randint(0, MAX_INT))    
+def main():
+    lst = []
+    for i in range(10000):
+        lst.append(randint(0, MAX_INT))    
 
-expected = sorted(lst)
-insertion_sort(lst)
-print(expected == lst)
+    expected = sorted(lst)
+    insertion_sort(lst)
+    print(expected == lst)
+    
+            
+if __name__ == "__main__":
+    main()
