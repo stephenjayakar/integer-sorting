@@ -10,7 +10,7 @@ This is one of the worst sorting algorithms *ever*
 """
 def bogo_sort(lst):
     while not in_order(lst):
-        shuffle(lst)    
+        shuffle(lst)
     
 def in_order(lst):
     n = len(lst)

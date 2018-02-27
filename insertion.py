@@ -21,7 +21,7 @@ def insertion_sort(lst):
 
 def main():
     lst = []
-    for i in range(10000):
+    for i in range(N):
         lst.append(randint(0, MAX_INT))    
 
     expected = sorted(lst)
