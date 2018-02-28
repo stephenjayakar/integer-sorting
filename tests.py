@@ -1,4 +1,4 @@
-from algs import bogo_sort, insertion_sort, counting_sort, merge_sort
+from algs import bogo_sort, insertion_sort, counting_sort, merge_sort, quick_sort
 from random import randint
 import unittest
 
@@ -45,6 +45,17 @@ class TestSorts(unittest.TestCase):
 
         expected = sorted(lst)
         lst = merge_sort(lst)
+        self.assertEqual(expected, lst)
+        
+    def test_quick(self):
+        MAX_INT = 10000
+        N = randint(0, 20000)
+        lst = []
+        for i in range(N):
+            lst.append(randint(0, MAX_INT))    
+
+        expected = sorted(lst)
+        lst = quick_sort(lst)
         self.assertEqual(expected, lst)
 
         

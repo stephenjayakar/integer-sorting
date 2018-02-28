@@ -1,4 +1,4 @@
-from random import shuffle
+from random import shuffle, randint
 """
 Bogosort
 O((n + 1)!)
@@ -92,9 +92,27 @@ Worst Case: O(n^2)
 Average: O(n lg n)
 Pivot-based partitioning sort; constant time a lot faster 
   than merge and heap sort
+In this version, picking a random pivot element
 """
 def quick_sort(lst):
-
+    n = len(lst)
+    if n <= 1:
+        return lst
+    # pick a random pivot
+    random_index = randint(0, n - 1)
+    pivot = lst[random_index]
+    left = []
+    equal = []
+    right = []
+    for elem in lst:
+        if elem < pivot:
+            left.append(elem)
+        elif elem == pivot:
+            equal.append(elem)
+        else:
+            right.append(elem)
+    return quick_sort(left) + equal + quick_sort(right)
+    
 # implement timsort
 
 # implement bubblesort

@@ -5,6 +5,7 @@ Not really sure why I'm doing this, but there were some cool algorithms I wanted
 Also, I'm starting to forget how basic algorithms work, so this will be a refresher.
 
 # Implemented Sorts
+- Quick Sort
 - Bogo Sort
 - Insertion Sort
 - Counting Sort
