@@ -36,12 +36,6 @@ def merge_sort(lst):
         merged_list.append(v)
         i2 += 1
     return merged_list
-
-"""
-Iterative Merge Sort
-"""
-def iter_merge_sort(lst):
-    print("TODO: Implement")
     
 def main():
     lst = []
