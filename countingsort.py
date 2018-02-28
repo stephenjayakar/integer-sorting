@@ -10,7 +10,6 @@ Pretty great if the range is small, though
  often the range can be massive (like 2^32)
 """
 def counting_sort(lst):
-    # also, make this in the range from min -> max instead of 0 -> max
     n = len(lst)
     # it would be faster to get the min and max at once
     max_val = max(lst)
