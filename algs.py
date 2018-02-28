@@ -35,7 +35,7 @@ def insertion_sort(lst):
 Non-destructive Counting Sort
 O(n + k) time, k is the range of values
 Pretty great if the range is small, though
- often the range can be massive (like 2^32)
+  often the range can be massive (like 2^32)
 """
 def counting_sort(lst):
     n = len(lst)
@@ -85,6 +85,15 @@ def merge_sort(lst):
         merged_list.append(v)
         i2 += 1
     return merged_list
+
+"""
+Quicksort
+Worst Case: O(n^2)
+Average: O(n lg n)
+Pivot-based partitioning sort; constant time a lot faster 
+  than merge and heap sort
+"""
+def quick_sort(lst):
 
 # implement timsort
 
